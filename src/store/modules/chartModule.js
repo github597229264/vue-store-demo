@@ -1,5 +1,5 @@
 import vue from 'vue';
-import * as types from './types.js'
+import * as types from '../types.js'
 /**
  * 统计图模块
  * @author Huangxinghui

@@ -44,7 +44,7 @@
 					pageNow: 1,
 					limit: 10
 				};
-				this.$store.dispatch("chartCenter/setChartData", oParams)
+				this.$store.dispatch("setChartData", oParams)
 				.then(res => {
 		      		let storeChart = this.$store.getters['chartCenter/getChartData'];
 					this.tableData = storeChart!=null?storeChart.list:[];
@@ -72,8 +72,8 @@
 					data:tables,
 					optType:'save'
 				};
-				this.$store.dispatch("chartCenter/setChartDataNoRequest", oParams);
-				let storeChart = this.$store.getters['chartCenter/getChartData'];
+				this.$store.dispatch("chartModule/setChartDataNoRequest", oParams);
+				let storeChart = this.$store.getters['chartModule/getChartData'];
 				this.tableData = storeChart!=null?storeChart.list:[];
 			},
 			/*

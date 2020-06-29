@@ -1,12 +1,13 @@
 import vue from 'vue';
-import * as types from './types.js'
+import * as types from '../types.js'
 /**
  * 用户中心模块
  * @author Huangxinghui
  */
 export default {
-	namespaced:false,//不启用命名空间模式
+	namespaced:true,//不启用命名空间模式
 	state:{//store中需要共享的组件的状态
+		userData:[]
 	},
 	mutations:{//修改state中的值
 		/**
