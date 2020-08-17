@@ -56,8 +56,8 @@
 					data:tables,
 					optType:'save'
 				};
-				this.$store.dispatch("setUserData", oParams);
-				let storeChart = this.$store.getters['getUserData'];
+				this.$store.dispatch("userModule/setUserData", oParams);
+				let storeChart = this.$store.getters['userModule/getUserData'];
 				this.tableData = storeChart!=null?storeChart.list:[];
 			},
 			/*
@@ -68,8 +68,8 @@
 					data:[],
 					optType:'delete'
 				};
-				this.$store.dispatch("setUserData", oParams);
-				let storeChart = this.$store.getters['getUserData'];
+				this.$store.dispatch("userModule/setUserData", oParams);
+				let storeChart = this.$store.getters['userModule/getUserData'];
 				this.tableData = storeChart!=null?storeChart.list:[];
 			}
 		}
